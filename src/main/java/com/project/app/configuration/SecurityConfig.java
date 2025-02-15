@@ -40,10 +40,20 @@ public class SecurityConfig {
 	public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 	    return http.csrf().disable()
 	            .authorizeHttpRequests(authorize -> authorize
+<<<<<<< HEAD
 	                    .requestMatchers("/signup/**", "/login").permitAll()
 	                    .requestMatchers("/api/sites/**").permitAll()
 	                    .requestMatchers("/api/employes/**").permitAll()
 	                    .requestMatchers("/api/directions/**").permitAll()
+=======
+	                    .requestMatchers("/diplomes/**", "/typediplomes/**").permitAll()
+	                    .requestMatchers("/login", "/signup/**").permitAll()
+	                    .requestMatchers("/recrutement/**").permitAll()
+	                    .requestMatchers("/recrutement/candidats/**").permitAll()
+	                    .requestMatchers("/recrutement/postes/**").permitAll()
+	                    .requestMatchers("/api/employes/**", "/disciplines/**").permitAll()
+	                    .requestMatchers("/swagger-ui/**", "/v3/api-docs/**").permitAll()
+>>>>>>> training_repo/main
 	                    .anyRequest().authenticated()
 	            )
 	            

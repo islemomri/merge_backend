@@ -16,13 +16,23 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.project.app.model.Employe;
+<<<<<<< HEAD
 import com.project.app.service.EmployeService;
+=======
+
+import com.project.app.service.IEmployeService;
+
+>>>>>>> training_repo/main
 
 @RestController
 @RequestMapping("/api/employes")
 public class EmployeController {
 	@Autowired
+<<<<<<< HEAD
     private EmployeService employeService;
+=======
+    private IEmployeService employeService;
+>>>>>>> training_repo/main
 
     @GetMapping
     public List<Employe> getAllEmployes() {
@@ -33,7 +43,10 @@ public class EmployeController {
     public Employe addEmploye(@RequestBody Employe employe) {
         return employeService.addEmploye(employe);
     }
+<<<<<<< HEAD
     
+=======
+>>>>>>> training_repo/main
 
     @GetMapping("/{id}")
     public Optional<Employe> getEmployeById(@PathVariable Long id) {
